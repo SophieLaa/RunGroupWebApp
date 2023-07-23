@@ -1,2 +1,2 @@
-# RunGroupWebApp
+# WebApp
 Social media app
