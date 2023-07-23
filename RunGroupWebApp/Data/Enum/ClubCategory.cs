@@ -1,6 +1,12 @@
 ﻿namespace RunGroupWebApp.Data.Enum
 {
-    public class ClubCategory
+    public enum ClubCategory
     {
+        RoadRunner,
+        Womens,
+        City,
+        Trail,
+        Endurance
+
     }
 }
