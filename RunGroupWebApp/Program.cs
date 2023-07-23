@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using RunGroopWebApp.Data;
 using RunGroupWebApp.Data;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,9 +14,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 var app = builder.Build();
-if (args.Length ==1&& args[0].ToLower()=="seeddata")
+if (args.Length == 1 && args[0].ToLower() == "seeddata")
 {
-  //Seed.SeedUser
+    //Seed.SeedUser
     Seed.SeedData(app);
 }
 
