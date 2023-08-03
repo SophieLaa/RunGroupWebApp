@@ -2,11 +2,11 @@
 
 namespace RunGroupWebApp.Controllers
 {
-    public class ClubController
+    public class ClubController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        public IActionResult Index()
+        {
+            return View();
+        }
     }
 }
