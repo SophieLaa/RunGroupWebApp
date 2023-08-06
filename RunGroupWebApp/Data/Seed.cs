@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using RunGroupWebApp.Data;
-using RunGroupWebApp.Data.Enum;
-using RunGroupWebApp.Models;
+﻿using RunGroupWebApp.Data.Enum;
 using RunGroupWebApp.Models;
 
 namespace RunGroupWebApp.Data
