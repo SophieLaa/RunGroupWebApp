@@ -9,7 +9,7 @@ namespace RunGroupWebApp.Repository
     {
         private readonly ApplicationDbContext _context;
 
-        public ClubRepository(ApplicationDbContext _context)
+        public ClubRepository(ApplicationDbContext context)
         {
             _context = _context;
         }
@@ -32,7 +32,7 @@ namespace RunGroupWebApp.Repository
 
         public async Task<Club> GetByIdAsync(int id)
         {
-            return await _context.Clubs.FirstOrDefaultAsync(i => i.Id == id);
+            return await _context.Clubs.Include(i=> i.Address).FirstOrDefaultAsync(i => i.Id == id);
         }
 
         public async Task<IEnumerable<Club>> GetClubByCity(string city)
