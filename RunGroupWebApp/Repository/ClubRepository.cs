@@ -11,11 +11,11 @@ namespace RunGroupWebApp.Repository
 
         public ClubRepository(ApplicationDbContext context)
         {
-            _context = _context;
+            _context = context;
         }
         public bool Add(Club club)
         {
-            _context.Add(club);
+            _context.Add(club); 
             return Save();
         }
 
