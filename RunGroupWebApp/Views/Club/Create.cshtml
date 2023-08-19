@@ -1,4 +1,5 @@
-﻿@model Club
+﻿@using RunGroupWebApp.Data.Enum;
+@model Club
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -7,16 +8,40 @@
 <form>
     <div class="form-group">
         <label asp-for="Title">Title</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input asp-for="Title" class="form-control" placeholder="Title">
+       <span asp-validation-for="Title" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description  " class="form-control" placeholder="Description">
+        <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    <div class="form-group">
+        <label asp-for="Image">Description</label>
+        <input asp-for="Image" class="form-control" placeholder="Title">
+        <span asp-validation-for="Image" class="text-danger"></span>
     </div>
-    <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <div class="form-group">
+        <label asp-for="ClubCategory">ClubCategory</label>
+        <select asp-for="ClubCategory" asp-items="@Html.GetEnumSelectList<ClubCategory>()">
+             <option>--Select--</option>
+        </select>
+        <span asp-validation-for="ClubCategory" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Street">Description</label>
+        <input asp-for="Address.Street" class="form-control" placeholder="Street">
+        <span asp-validation-for="Address.Street" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.City">Description</label>
+        <input asp-for="Address.City" class="form-control" placeholder="City">
+        <span asp-validation-for="Address.City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.State">Description</label>
+        <input asp-for="Address.State" class="form-control" placeholder="State">
+        <span asp-validation-for="Address.State" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
