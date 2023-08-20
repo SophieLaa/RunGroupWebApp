@@ -31,5 +31,16 @@ namespace RunGroupWebApp.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create (Club Club)
+        {
+            if (ModelState.IsValid)
+            {
+                return View(Club);
+            }
+            _clubRepository.Add(Club);
+            return RedirectToAction("Index");
+        }
     }
 }
