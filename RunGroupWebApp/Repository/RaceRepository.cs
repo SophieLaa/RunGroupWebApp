@@ -14,13 +14,13 @@ namespace RunGroupWebApp.Repository
             _context = context;
         }
 
-        public bool Add(Club race)
+        public bool Add(Race race)
         {
             _context.Add(race);
             return Save();
         }
 
-        public bool Delete(Club race)
+        public bool Delete(Race race)
         {
             _context.Remove(race);
             return Save();
@@ -50,7 +50,7 @@ namespace RunGroupWebApp.Repository
             return saved > 0 ? true : false;
         }
 
-        public bool Update(Club race)
+        public bool Update(Race race)
         {
             _context.Update(race);
             return Save();

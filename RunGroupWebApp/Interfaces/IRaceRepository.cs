@@ -7,9 +7,9 @@ namespace RunGroupWebApp.Interfaces
         Task<IEnumerable<Race>> GetAll();
         Task<Race> GetByIdAsync(int id);
         Task<IEnumerable<Race>> GetRaceByCity(string city);
-        bool Add(Club race);
-        bool Update(Club race);
-        bool Delete(Club race);
+        bool Add (Race race);
+        bool Update(Race race);
+        bool Delete(Race race);
         bool Save();
     }
 }
