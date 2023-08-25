@@ -28,7 +28,7 @@ namespace RunGroupWebApp.Controllers
         {
             return View();
         }
-        [HttpPost]
+        [HttpPost] 
         public async Task<IActionResult> Create(Race race)
         {
             if (!ModelState.IsValid)
