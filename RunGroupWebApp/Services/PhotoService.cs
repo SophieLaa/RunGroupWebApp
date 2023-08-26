@@ -8,7 +8,7 @@ namespace RunGroupWebApp.Services
 {
     public class PhotoService : IPhotoService
     {
-        private readonly Cloudinary _cloundinary;
+        private readonly Cloudinary _cloudinary;
         public PhotoService(IOptions<CloudinarySettings> config)
         {
             var acc = new Account(
@@ -36,8 +36,8 @@ namespace RunGroupWebApp.Services
 
         public async Task<DeletionResult> DeletePhotoAsync(string publicId)
         {
-            var deleteParems = new DeletionParams(publicId);
-            var result = await _cloundinary.DestroyAsync(deleteParams);
+            var deleteParams = new DeletionParams(publicId);
+            var result = await _cloudinary.DestroyAsync(deleteParams);
             return result;
         }
     }
